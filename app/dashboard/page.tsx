@@ -23,7 +23,7 @@ export default function Dashboard() {
 
     useEffect(() => {
         if (!isPending && !session) {
-            router.push('/');
+            router.push('/auth/sign-in');
         }
     }, [session, isPending, router]);
 
@@ -105,7 +105,6 @@ export default function Dashboard() {
                 {/* Profile Card */}
                 <div className="border border-border p-8 space-y-6 fade-in-up" style={{ animationDelay: '0.2s' }}>
                     <div className="flex items-center gap-6">
-                        {/* Avatar */}
                         {user.image ? (
                             <img
                                 src={user.image}
@@ -154,7 +153,6 @@ export default function Dashboard() {
                         </div>
                     </div>
 
-                    {/* Edit Toggle */}
                     {!isEditing && (
                         <button
                             onClick={() => setIsEditing(true)}
@@ -209,7 +207,6 @@ export default function Dashboard() {
                                 </p>
                             </div>
 
-                            {/* Preview */}
                             {editImage && (
                                 <div className="flex items-center gap-4">
                                     <img
@@ -246,6 +243,17 @@ export default function Dashboard() {
                         </form>
                     </div>
                 )}
+
+                {/* Footer */}
+                <div className="text-center pt-8 pb-2 fade-in-up" style={{ animationDelay: '0.4s' }}>
+                    <p className="text-xs font-mono text-muted-foreground uppercase tracking-widest">
+                        Built by{' '}
+                        <a href="https://abirbhabdasgupta.vercel.app" target="_blank" rel="noopener noreferrer" className="text-foreground hover:text-primary transition-colors duration-200 underline underline-offset-4">
+                            Abirbhab Dasgupta
+                        </a>
+                    </p>
+                </div>
+
             </div>
         </div>
     );

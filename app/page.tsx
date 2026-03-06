@@ -7,7 +7,6 @@ export default function Home() {
   const [isLoaded, setIsLoaded] = useState(false)
 
   useEffect(() => {
-
     setIsLoaded(true)
   }, [])
 
@@ -28,8 +27,7 @@ export default function Home() {
         <div className="max-w-4xl mx-auto text-center space-y-10">
           {/* Main Heading */}
           <h1
-            className={`heading-xl text-white transition-all duration-700 ${isLoaded ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'
-              }`}
+            className={`heading-xl text-white transition-all duration-700 ${isLoaded ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`}
             style={{ transitionDelay: '0.2s' }}
           >
             AUth Next
@@ -37,8 +35,7 @@ export default function Home() {
 
           {/* Subtitle */}
           <p
-            className={`subtitle max-w-2xl mx-auto transition-all duration-700 ${isLoaded ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-4'
-              }`}
+            className={`subtitle max-w-2xl mx-auto transition-all duration-700 ${isLoaded ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-4'}`}
             style={{ transitionDelay: '0.4s' }}
           >
             Better auth authentication applied in your Next.js project
@@ -46,8 +43,7 @@ export default function Home() {
 
           {/* CTA Buttons */}
           <div
-            className={`flex flex-col sm:flex-row gap-6 justify-center pt-8 transition-all duration-700 ${isLoaded ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-4'
-              }`}
+            className={`flex flex-col sm:flex-row gap-6 justify-center pt-8 transition-all duration-700 ${isLoaded ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-4'}`}
             style={{ transitionDelay: '0.6s' }}
           >
             <Link
@@ -65,7 +61,18 @@ export default function Home() {
           </div>
         </div>
       </div>
+
       <div className="absolute bottom-0 left-0 right-0 h-px bg-linear-to-r from-transparent via-primary/30 to-transparent pointer-events-none" />
-    </main>
+
+      {/* Footer */}
+      <div className="absolute bottom-6 left-0 right-0 flex justify-center z-10">
+        <p className="text-xs font-mono text-muted-foreground uppercase tracking-widest">
+          Built by{' '}
+          <a href="https://abirbhabdasgupta.vercel.app" target="_blank" rel="noopener noreferrer" className="text-foreground hover:text-primary transition-colors duration-200 underline underline-offset-4">
+            Abirbhab Dasgupta
+          </a>
+        </p>
+      </div>
+    </main >
   )
 }
