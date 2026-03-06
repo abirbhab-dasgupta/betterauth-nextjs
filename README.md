@@ -5,7 +5,7 @@
 
 ## Tech Stack
 
-- **Framework**: Next.js 15+ (App Router)
+- **Framework**: Next.js 16 (App Router)
 - **Authentication**: Better Auth
 - **Database**: Neon (PostgreSQL)
 - **ORM**: Drizzle ORM
