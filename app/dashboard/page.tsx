@@ -23,7 +23,7 @@ export default function Dashboard() {
 
     useEffect(() => {
         if (!isPending && !session) {
-            router.push('/auth/sign-in');
+            router.push('/');
         }
     }, [session, isPending, router]);
 
@@ -37,7 +37,7 @@ export default function Dashboard() {
     const handleSignOut = async () => {
         setSignOutLoading(true);
         await signOut();
-        router.push('/auth/sign-in');
+        router.push('/');
     };
 
     const handleUpdate = async (e: React.FormEvent) => {
